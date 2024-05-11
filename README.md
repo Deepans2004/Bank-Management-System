@@ -2,6 +2,13 @@
 
 The Bank Management System is a Java-based application built using Swing and AWT for the user interface and MySQL for database management. This system aims to provide a comprehensive solution for managing the day-to-day operations of a bank.🚀
 
+Technology used:
+1.JAVA (programming Langugae)
+2.Swing & AWT (GUI Widget Toolkit for Java)
+3.MySQL (Database)
+4.Git & Github (to disply project)
+5.Intellij idea(IDE for Java Programming by Jetbrains)
+
 ⚡Key Features:
 
 User Authentication: Secure login system for bank employees and administrators.
