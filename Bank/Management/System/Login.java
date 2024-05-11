@@ -6,7 +6,8 @@ import java.awt.event.*;
 public class Login extends JFrame implements ActionListener{
 
     JButton login,Signup,Clear;
-    JTextField cardtextfield,pintextfield;
+    JTextField cardtextfield;
+    JPasswordField pintextfield;
 
     Login() {
 
@@ -32,6 +33,7 @@ public class Login extends JFrame implements ActionListener{
 
         cardtextfield = new JTextField();
         cardtextfield.setBounds(300,150,230,30);
+        cardtextfield.setFont(new Font("Arial", Font.BOLD, 14));
         add(cardtextfield);
 
         JLabel pin= new JLabel("PIN:");
@@ -39,8 +41,9 @@ public class Login extends JFrame implements ActionListener{
         pin.setBounds(120,220,250,30);
         add(pin);
 
-        pintextfield = new JTextField();
+        pintextfield = new JPasswordField();
         pintextfield.setBounds(300,220,230,30);
+        pintextfield.setFont(new Font("Arial", Font.BOLD, 14));
         add(pintextfield);
 
         login=new JButton("Sign in");
@@ -73,6 +76,8 @@ public class Login extends JFrame implements ActionListener{
 
     public void actionPerformed(ActionEvent ae) {
          if( ae.getSource() == Clear){
+             cardtextfield.setText("");
+             pintextfield.setText("");
         }
         else if(ae.getSource() == login){
 
