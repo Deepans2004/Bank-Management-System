@@ -7,7 +7,7 @@ public class Login extends JFrame {
     Login() {
 
         setTitle("AUTOMATED TELLER MACHINE");
-        ImageIcon il=new ImageIcon(ClassLoader.getSystemResource("icons/logo.jpg"));
+        ImageIcon il=new ImageIcon(ClassLoader.getSystemResource("icons/BANK.png"));
         Image i2=il.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3=new ImageIcon(i2);
         JLabel label= new JLabel(il);
