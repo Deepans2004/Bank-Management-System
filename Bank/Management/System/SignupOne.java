@@ -48,7 +48,7 @@ public class SignupOne extends JFrame {
         dob.setBounds(100,240,200,30);
         add(dob);
 
-         
+
 
         JLabel Gen= new JLabel("Gender:");
         Gen.setFont(new Font("Raleway", Font.BOLD, 20));
