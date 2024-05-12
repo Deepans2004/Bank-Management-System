@@ -222,12 +222,18 @@ public class SignupOne extends JFrame implements ActionListener {
             }
             if(address.equals("")){
                 JOptionPane.showMessageDialog(null,"Address is Required");
+            }else {
+                conn c=new conn();
+                String query= "insert into signup values('"+formno+"','"+name+"','"+fname+"','"+dob+"','"+gender+"','"+email+"','"+maritalstatus+"','"+address+"','"+city+"','"+state+"','"+pincode+"')";
+            c.s.executeUpdate(query);
             }
         }catch (Exception e){
             System.out.println(e);
         }
 
     }
+
+
 
     public static void main(String[]args){
         new SignupOne();
