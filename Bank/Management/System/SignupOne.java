@@ -180,6 +180,7 @@ public class SignupOne extends JFrame implements ActionListener {
         if(male.isSelected()){
             gender="Male";
         }
+
         else if(female.isSelected()){
             gender="Female";
         }
@@ -203,6 +204,24 @@ public class SignupOne extends JFrame implements ActionListener {
         try{
             if(name.equals("")){
                 JOptionPane.showMessageDialog(null,"Name is Required");
+            }
+            if(fname.equals("")){
+                JOptionPane.showMessageDialog(null,"Fathers Name is Required");
+            }
+            if(email.equals("")){
+                JOptionPane.showMessageDialog(null,"Email is Required");
+            }
+            if(city.equals("")){
+                JOptionPane.showMessageDialog(null,"City is Required");
+            }
+            if(pincode.equals("")){
+                JOptionPane.showMessageDialog(null,"Pincode is Required");
+            }
+            if(state.equals("")){
+                JOptionPane.showMessageDialog(null,"State is Required");
+            }
+            if(address.equals("")){
+                JOptionPane.showMessageDialog(null,"Address is Required");
             }
         }catch (Exception e){
             System.out.println(e);
