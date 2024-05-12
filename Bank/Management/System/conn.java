@@ -11,8 +11,7 @@ public class conn {
         try {
             //register the deriver
             //create the connection
-            c=DriverManager.getConnection("jdbc:mysql:///bankmanagementsystem", "root", "Qwert@#12345" +
-                    "wert@#12345");
+            c=DriverManager.getConnection("jdbc:mysql:///bankmanagementsystem", "root", "Qwert@#12345");
            //create statement
             s=c.createStatement();
         } catch(Exception e){
