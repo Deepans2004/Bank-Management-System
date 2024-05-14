@@ -9,11 +9,12 @@ import java.awt.event.*;
 public class signup2 extends JFrame implements ActionListener {
 
     long random;
-    JTextField nametextfield,fnametextfield,emailtextfield,addtextfield,citytextfield,statetextfield,pincodetextfield;
+    JTextField pan,aadhar;
     JButton next;
     JRadioButton male,female,married,unmarried,Other;
-    JDateChooser dateChooser;
+    JRadioButton syes,sno,eyes,eno;
     JComboBox religion,categor,occupation,education,income,occp;
+
 
     signup2(){
 
@@ -128,11 +129,6 @@ public class signup2 extends JFrame implements ActionListener {
         seniorcitizen.add(syes);
         seniorcitizen.add(sno);
 
-        statetextfield=new JTextField();
-        statetextfield.setFont(new Font("Raleway",Font.BOLD,14));
-        statetextfield.setBounds(300,540,400,30);
-        add(statetextfield);
-
         JLabel Existing= new JLabel("Existing Account:");
         Existing.setFont(new Font("Raleway", Font.BOLD, 20));
         Existing.setBounds(100,590,200,30);
@@ -152,15 +148,10 @@ public class signup2 extends JFrame implements ActionListener {
         excisting.add(eyes);
         excisting.add(eno);
 
-        pincodetextfield=new JTextField();
-        pincodetextfield.setFont(new Font("Raleway",Font.BOLD,14));
-        pincodetextfield.setBounds(300,590,400,30);
-        add(pincodetextfield);
-
         JButton next=new JButton("Next");
         next.setBackground(Color.BLACK);
         next.setForeground(Color.WHITE);
-        next.setFont(new Font("Ralewa", Font.BOLD, 14));
+        next.setFont(new Font("Raleway", Font.BOLD, 14));
         next.setBounds(620,660,80,30);
         next.addActionListener(this);
         add(next);
@@ -173,9 +164,8 @@ public class signup2 extends JFrame implements ActionListener {
 
     public void actionPerformed (ActionEvent ae){
         String formno = "" +random;
-        String name= nametextfield.getText();
-        String fname=fnametextfield.getText();
-        String dob = ((JTextField)dateChooser.getDateEditor().getUiComponent()).getText();
+        String sreligion = (String) religion.getSelectedItem();
+        String scatedory= (String) categor.getSelectedItem();
         String gender= null;
         if(male.isSelected()){
             gender="Male";
@@ -224,7 +214,7 @@ public class signup2 extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null,"Address is Required");
             }else {
                 conn c=new conn();
-                String query= "insert into signup values('"+formno+"','"+name+"','"+fname+"','"+dob+"','"+gender+"','"+email+"','"+maritalstatus+"','"+address+"','"+city+"','"+state+"','"+pincode+"')";
+                String query= "insert into signup values('"+formno+"','"+name+"','"+fname+"','"+gender+"','"+email+"','"+maritalstatus+"','"+address+"','"+city+"','"+state+"','"+pincode+"')";
                 c.s.executeUpdate(query);
             }
         }catch (Exception e){
