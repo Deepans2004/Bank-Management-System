@@ -177,8 +177,6 @@ public class signup2 extends JFrame implements ActionListener {
         else if(sno.isSelected()){
             seniorcitizen="no";
         }
-
-        String email=emailtextfield.getText();
         String Existing=null;
         if(eyes.isSelected()){
             Existing="yes";
@@ -186,37 +184,14 @@ public class signup2 extends JFrame implements ActionListener {
         else if(eno.isSelected()){
             Existing="No";
         }
-        String address=addtextfield.getText();
-        String city=citytextfield.getText();
-        String state=statetextfield.getText();
-        String pincode=pincodetextfield.getText();
+
+        String span =pan.getText();
+        String saadhar=aadhar.getText();
 
         try{
-            if(name.equals("")){
-                JOptionPane.showMessageDialog(null,"Name is Required");
-            }
-            if(fname.equals("")){
-                JOptionPane.showMessageDialog(null,"Fathers Name is Required");
-            }
-            if(email.equals("")){
-                JOptionPane.showMessageDialog(null,"Email is Required");
-            }
-            if(city.equals("")){
-                JOptionPane.showMessageDialog(null,"City is Required");
-            }
-            if(pincode.equals("")){
-                JOptionPane.showMessageDialog(null,"Pincode is Required");
-            }
-            if(state.equals("")){
-                JOptionPane.showMessageDialog(null,"State is Required");
-            }
-            if(address.equals("")){
-                JOptionPane.showMessageDialog(null,"Address is Required");
-            }else {
                 conn c=new conn();
                 String query= "insert into signup values('"+formno+"','"+name+"','"+fname+"','"+gender+"','"+email+"','"+maritalstatus+"','"+address+"','"+city+"','"+state+"','"+pincode+"')";
                 c.s.executeUpdate(query);
-            }
         }catch (Exception e){
             System.out.println(e);
         }
