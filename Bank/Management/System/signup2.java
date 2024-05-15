@@ -118,12 +118,12 @@ public class signup2 extends JFrame implements ActionListener {
         add(Senior);
 
         syes=new JRadioButton("yes");
-        syes.setBounds(300,390,100,30);
+        syes.setBounds(300,540,100,30);
         syes.setBackground(Color.WHITE);
         add(syes);
 
         sno=new JRadioButton("No");
-        sno.setBounds(450,390,100,30);
+        sno.setBounds(450,540,100,30);
         sno.setBackground(Color.WHITE);
         add(sno);
 
@@ -137,12 +137,12 @@ public class signup2 extends JFrame implements ActionListener {
         add(Existing);
 
         eyes=new JRadioButton("yes");
-        eyes.setBounds(300,390,100,30);
+        eyes.setBounds(300,590,100,30);
         eyes.setBackground(Color.WHITE);
         add(eyes);
 
         eno=new JRadioButton("No");
-        eno.setBounds(450,390,100,30);
+        eno.setBounds(450,590,100,30);
         eno.setBackground(Color.WHITE);
         add(eno);
 
