@@ -14,7 +14,7 @@ public class SignupOne extends JFrame implements ActionListener {
     JRadioButton male,female,married,unmarried,Other;
     JDateChooser dateChooser;
 
-    SignupOne(){
+    SignupOne(String formno){
 
         setLayout(null);
 
@@ -229,7 +229,7 @@ public class SignupOne extends JFrame implements ActionListener {
 
 
             setVisible(false);
-            new signup2().setVisible(true);
+            new signup2(formno).setVisible(true);
             }
         }catch (Exception e){
             System.out.println(e);
@@ -238,6 +238,6 @@ public class SignupOne extends JFrame implements ActionListener {
     }
 
     public static void main(String[]args){
-        new SignupOne();
+        new SignupOne("");
     }
 }

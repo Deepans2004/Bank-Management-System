@@ -14,9 +14,11 @@ public class signup2 extends JFrame implements ActionListener {
     JRadioButton male,female,married,unmarried,Other;
     JRadioButton syes,sno,eyes,eno;
     JComboBox religion,categor,occupation,education,income,occp;
+    String formno;
 
 
-    signup2(){
+    signup2(String formno){
+        this.formno=formno;
 
         setLayout(null);
 
@@ -190,7 +192,7 @@ public class signup2 extends JFrame implements ActionListener {
 
         try{
                 conn c=new conn();
-                String query= "insert into signup values('"+formno+"','"+name+"','"+fname+"','"+gender+"','"+email+"','"+maritalstatus+"','"+address+"','"+city+"','"+state+"','"+pincode+"')";
+                String query= "insert into signup2 values('"+formno+"','"+sreligion+"','"+scatedory+"','"+sincome+"','"+seducation+"','"+soccupation+"','"+span+"','"+saadhar+"','"+seniorcitizen+"','"+Existing+"')";
                 c.s.executeUpdate(query);
         }catch (Exception e){
             System.out.println(e);
