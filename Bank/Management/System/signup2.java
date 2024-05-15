@@ -166,26 +166,26 @@ public class signup2 extends JFrame implements ActionListener {
         String formno = "" +random;
         String sreligion = (String) religion.getSelectedItem();
         String scatedory= (String) categor.getSelectedItem();
-        String gender= null;
-        if(male.isSelected()){
-            gender="Male";
+        String sincome= (String) income.getSelectedItem();
+        String seducation=(String) education.getSelectedItem();
+        String soccupation=(String) occp.getSelectedItem();
+        String seniorcitizen=null;
+        if(syes.isSelected()){
+            seniorcitizen="Yes";
         }
 
-        else if(female.isSelected()){
-            gender="Female";
+        else if(sno.isSelected()){
+            seniorcitizen="no";
         }
+
         String email=emailtextfield.getText();
-        String maritalstatus=null;
-        if(married.isSelected()){
-            maritalstatus="Married";
+        String Existing=null;
+        if(eyes.isSelected()){
+            Existing="yes";
         }
-        else if(unmarried.isSelected()){
-            maritalstatus="Unmarried";
+        else if(eno.isSelected()){
+            Existing="No";
         }
-        else if(Other.isSelected()){
-            maritalstatus="Other";
-        }
-
         String address=addtextfield.getText();
         String city=citytextfield.getText();
         String state=statetextfield.getText();
