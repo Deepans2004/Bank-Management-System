@@ -201,6 +201,6 @@ public class signup2 extends JFrame implements ActionListener {
     }
 
     public static void main(String[]args){
-        new signup2();
+        new signup2("");
     }
 }
