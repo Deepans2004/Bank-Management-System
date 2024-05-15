@@ -8,7 +8,6 @@ import java.awt.event.*;
 
 public class signup2 extends JFrame implements ActionListener {
 
-    long random;
     JTextField pan,aadhar;
     JButton next;
     JRadioButton male,female,married,unmarried,Other;
@@ -165,7 +164,6 @@ public class signup2 extends JFrame implements ActionListener {
     }
 
     public void actionPerformed (ActionEvent ae){
-        String formno = "" +random;
         String sreligion = (String) religion.getSelectedItem();
         String scatedory= (String) categor.getSelectedItem();
         String sincome= (String) income.getSelectedItem();
