@@ -90,7 +90,7 @@ public class signup3 extends JFrame {
         c1.setBackground(Color.white);
         c1.setFont(new Font("Raleway",Font.BOLD,16));
         c1.setBounds(100,500,200,30);
-        add(c1);
+        add(c1);     
 
         setSize(850,820);
         setLocation(350,0);
