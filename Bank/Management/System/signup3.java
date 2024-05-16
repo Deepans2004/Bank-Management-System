@@ -174,7 +174,28 @@ public class signup3 extends JFrame implements ActionListener {
 
             String pinnumber=""+Math.abs(random.nextLong()%9000L)+1000L;
 
-            String
+            String facility=" ";
+            if(c1.isSelected()) {
+                facility=facility+"ATM Card";
+            }
+            else if(c2.isSelected()) {
+                facility=facility+"Internet Banking";
+            }
+            else if(c3.isSelected()) {
+                facility=facility+"Mobile Banking";
+            }
+            else if(c4.isSelected()) {
+                facility=facility+"Email & SMS Alerts";
+            }
+            else if(c5.isSelected()) {
+                facility=facility+"Cheque Book";
+            }
+            else if(c6.isSelected()) {
+                facility=facility+"E-Statement";
+            }
+
+            
+
         }
         else if(ae.getSource()==cancel){
 
