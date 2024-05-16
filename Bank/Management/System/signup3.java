@@ -172,9 +172,9 @@ public class signup3 extends JFrame implements ActionListener {
             }
 
             Random random=new Random();
-            String  cardnumber=""+Math.abs(random.nextLong()%90000000L)+5040936000000000L;
+            String  cardnumber=""+Math.abs((random.nextLong()%90000000L)+5040936000000000L);
 
-            String pinnumber=""+Math.abs(random.nextLong()%9000L)+1000L;
+            String pinnumber=""+Math.abs((random.nextLong()%9000L)+1000L);
 
             String facility=" ";
             if(c1.isSelected()) {
@@ -202,7 +202,9 @@ public class signup3 extends JFrame implements ActionListener {
                 }else{
                     conn con =new conn();
                     String query1="insert into signup3 value('"+formno+"','"+accounttype+"','"+cardnumber+"','"+pinnumber+"','"+facility+"')";
+                    String query2="insert into login value('"+formno+"','"+cardnumber+"','"+pinnumber+"')";
                     con.s.executeUpdate(query1);
+                    con.s.executeUpdate(query2);
 
                     JOptionPane.showMessageDialog(null, "Card Number:" +cardnumber+"\n pin: "+ pinnumber );
                 }
