@@ -6,6 +6,7 @@ import java.awt.*;
 public class signup3 extends JFrame {
 
     JRadioButton r1,r2,r3,r4;
+    JCheckBox c1,c2,c3,c4,c5,c6,c7;
 
     signup3(){
         setLayout(null);
@@ -59,7 +60,7 @@ public class signup3 extends JFrame {
         number.setFont(new Font("Raleway",Font.BOLD,22));
         number.setBounds(330,300,300,30);
         add(number);
-        
+
         JLabel carddetail = new JLabel("Your 16 digit Card Number");
         carddetail.setFont(new Font("Raleway",Font.BOLD,12));
         carddetail.setBounds(100,330,300,15);
@@ -74,6 +75,22 @@ public class signup3 extends JFrame {
         pnumber.setFont(new Font("Raleway",Font.BOLD,22));
         pnumber.setBounds(330,370,300,30);
         add(pnumber);
+
+        JLabel pindetail = new JLabel("Your 4 digit pin");
+        pindetail.setFont(new Font("Raleway",Font.BOLD,12));
+        pindetail.setBounds(100,400,300,15);
+        add(pindetail);
+
+        JLabel services = new JLabel("Services Required:");
+        services.setFont(new Font("Raleway",Font.BOLD,22));
+        services.setBounds(100,450,300,30);
+        add(services);
+
+        c1=new JCheckBox("ATM Card");
+        c1.setBackground(Color.white);
+        c1.setFont(new Font("Raleway",Font.BOLD,16));
+        c1.setBounds(100,500,200,30);
+        add(c1);
 
         setSize(850,820);
         setLocation(350,0);
