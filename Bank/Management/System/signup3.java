@@ -203,6 +203,8 @@ public class signup3 extends JFrame implements ActionListener {
                     conn con =new conn();
                     String query1="insert into signup3 value('"+formno+"','"+accounttype+"','"+cardnumber+"','"+pinnumber+"','"+facility+"')";
                     con.s.executeUpdate(query1);
+
+                    JOptionPane.showMessageDialog(null, "Card Number:" +cardnumber+"\n pin: "+ pinnumber );
                 }
             }catch (Exception e){
                 System.out.println(e);
