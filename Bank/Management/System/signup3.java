@@ -10,8 +10,10 @@ public class signup3 extends JFrame implements ActionListener {
     JRadioButton r1,r2,r3,r4;
     JCheckBox c1,c2,c3,c4,c5,c6,c7;
     JButton submit,cancel;
+    String formno;
 
-    signup3(){
+    signup3(String formno){
+        this.formno = formno;
         setLayout(null);
 
         JLabel l1 = new JLabel("Page 3: Account Details");
@@ -194,7 +196,17 @@ public class signup3 extends JFrame implements ActionListener {
                 facility=facility+"E-Statement";
             }
 
-            
+            try {
+                if(accounttype.equals("")){
+                    JOptionPane.showMessageDialog(null,"Account Type is Required");
+                }else{
+                    conn con =new conn();
+                    String query1="insert into signup3 value('"+formno+"','"+accounttype+"','"+cardnumber+"','"+pinnumber+"','"+facility+"')";
+                    con.s.executeUpdate(query1);
+                }
+            }catch (Exception e){
+                System.out.println(e);
+            }
 
         }
         else if(ae.getSource()==cancel){
@@ -203,6 +215,6 @@ public class signup3 extends JFrame implements ActionListener {
     }
 
     public static void main(String[]args){
-        new signup3();
+        new signup3("");
     }
 }
