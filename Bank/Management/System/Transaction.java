@@ -19,7 +19,7 @@ public class Transaction extends JFrame {
             JLabel text=new JLabel("Please Select your Transactions");
             text.setBounds(235,300,700,35);
             text.setForeground(Color.WHITE);
-            text.setFont(new font("System"));
+            text.setFont(new Font("System",Font.BOLD,16));
             image.add(text);
 
             setSize(900,900);
