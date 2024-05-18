@@ -2,8 +2,11 @@ package Bank.Management.System;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class Transaction extends JFrame {
+public class Transaction extends JFrame implements ActionListener {
+
+    JButton deposit,withdrawl,fastcash,mini,pinchange,balancewnuiry,exit;
 
         Transaction() {
 
@@ -22,38 +25,42 @@ public class Transaction extends JFrame {
             text.setFont(new Font("System",Font.BOLD,16));
             image.add(text);
 
-            JButton deposit=new JButton("Deposit");
+            deposit=new JButton("Deposit");
             deposit.setBounds(170,415,150,30);
             image.add(deposit);
 
-            JButton withdrawl=new JButton("Withdrawl");
+            withdrawl=new JButton("Withdrawl");
             withdrawl.setBounds(355,415,150,30);
             image.add(withdrawl);
 
-            JButton fastcash=new JButton("Fast cash");
+            fastcash=new JButton("Fast cash");
             fastcash.setBounds(170,450,150,30);
             image.add(fastcash);
 
-            JButton mini=new JButton("Mini Statement");
+            mini=new JButton("Mini Statement");
             mini.setBounds(355,450,150,30);
             image.add(mini);
 
-            JButton pinchange=new JButton("Pin Change");
+            pinchange=new JButton("Pin Change");
             pinchange.setBounds(170,485,150,30);
             image.add(pinchange);
 
-            JButton balancewnuiry=new JButton("Balance Enquiry");
+            balancewnuiry=new JButton("Balance Enquiry");
             balancewnuiry.setBounds(355,485,150,30);
             image.add(balancewnuiry);
 
-            JButton exit=new JButton("Exit");
-            exit.setBounds(355,520,150,30); 
+            exit=new JButton("Exit");
+            exit.setBounds(355,520,150,30);
             image.add(exit);
 
             setSize(900,900);
             setLocation(300,0);
 //            setUndecorated(true);
             setVisible(true);
+        }
+
+        public void actionPerformed(ActionEvent ae){
+
         }
 
         public static void main(String args[]){
