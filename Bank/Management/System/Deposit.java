@@ -8,8 +8,11 @@ public class Deposit extends JFrame implements ActionListener {
 
     JTextField amount;
     JButton deposit,back;
+    String pinnumber;
 
-    Deposit(){
+    Deposit(String pinnumber){
+
+        this.pinnumber=pinnumber;
         setLayout(null);
 
         setLayout(null);
@@ -54,7 +57,7 @@ public class Deposit extends JFrame implements ActionListener {
     }
 
     public static void main(String args[]){
-        new Deposit();
+        new Deposit("");
     }
 
 }
