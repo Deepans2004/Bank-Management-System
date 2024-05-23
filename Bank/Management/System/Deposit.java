@@ -61,7 +61,8 @@ public class Deposit extends JFrame implements ActionListener {
             else {
                 try {
                     conn con = new conn();
-                    String query = "insert into bank values('" + pinnumber + "','" + date + "','" + deposit + "','" + number + "')";
+                    String query = "insert into bank values('" + pinnumber + "','" + date + "','" + deposit + "','" + number + "'" +
+                            ")";
                     con.s.executeUpdate(query);
                     JOptionPane.showMessageDialog(null, "Rs " + number + " Deposited Successfully");
                     setVisible(false);
