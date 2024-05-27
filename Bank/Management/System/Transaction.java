@@ -47,6 +47,7 @@ public class Transaction extends JFrame implements ActionListener {
             mini.addActionListener(this);
             image.add(mini);
 
+
             pinchange=new JButton("Pin Change");
             pinchange.setBounds(170,485,150,30);
             pinchange.addActionListener(this);

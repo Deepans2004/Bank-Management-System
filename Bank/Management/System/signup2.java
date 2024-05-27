@@ -181,6 +181,7 @@ public class signup2 extends JFrame implements ActionListener {
         if(eyes.isSelected()){
             Existing="yes";
         }
+
         else if(eno.isSelected()){
             Existing="No";
         }
