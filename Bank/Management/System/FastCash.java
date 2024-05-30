@@ -1,8 +1,10 @@
 package Bank.Management.System;
 
+import com.mysql.cj.protocol.Resultset;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.*;
 
 public class FastCash extends JFrame implements ActionListener {
 
@@ -74,7 +76,19 @@ public class FastCash extends JFrame implements ActionListener {
             setVisible(false);
             new Transaction(pinnumber).setVisible(true);
         }else{
-            String amount=((JButton)ae.getSource()).getText(),substring(3); 
+            String amount=((JButton)ae.getSource()).getText().substring(3);
+            conn c=new conn();
+            try{
+                Resultset rs =c.s.executeQuery("select * from bank where pin = '"+pinnumber+"'");
+                int balance=0;
+                while(rs.next()){
+                    if(rs.getString("type").equals("Deposit")){
+                        balance += rs.getString("amount");
+                    }
+                }
+            } catch(Exception e){
+                System.out.println(e);
+            }
         }
     }
 
