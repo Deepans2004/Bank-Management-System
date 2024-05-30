@@ -74,7 +74,7 @@ public class FastCash extends JFrame implements ActionListener {
             setVisible(false);
             new Transaction(pinnumber).setVisible(true);
         }else{
-             
+
         }
     }
 
