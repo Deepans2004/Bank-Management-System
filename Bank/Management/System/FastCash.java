@@ -74,7 +74,7 @@ public class FastCash extends JFrame implements ActionListener {
             setVisible(false);
             new Transaction(pinnumber).setVisible(true);
         }else{
-
+            String amount=((JButton)ae.getSource()).getText(),substring(3); 
         }
     }
 
