@@ -95,7 +95,7 @@ public class FastCash extends JFrame implements ActionListener {
                 }
 
                 Date date=new Date();
-                String query="insert into bank values('"+pinnumber+"','"+date+"', 'Withdeawl', '"+amount+"')";
+                String query="insert into bank values('"+pinnumber+"','"+date+"', 'Withdrawal', '"+amount+"')";
                 c.s.executeUpdate(query);
                 JOptionPane.showMessageDialog(null,"Rs "+ amount+" Debited Successfully");
 
