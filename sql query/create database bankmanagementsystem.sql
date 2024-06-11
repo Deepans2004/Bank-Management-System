@@ -13,7 +13,7 @@ select * from singuptwo;
 
 create table signupthree(formno varchar(20), accountType varchar(40), cardnumber varchar(25), pin varchar(10), facility varchar(100)); 
 
-select * from singupthree;
+select * from signupthree;
 
 create table login(formno varchar(20), cardnumber varchar(25), pin varchar(10));
 
