@@ -42,24 +42,18 @@ public class Transaction extends JFrame implements ActionListener {
             fastcash.addActionListener(this);
             image.add(fastcash);
 
-            mini=new JButton("Mini Statement");
-            mini.setBounds(355,450,150,30);
-            mini.addActionListener(this);
-            image.add(mini);
-
-
             pinchange=new JButton("Pin Change");
             pinchange.setBounds(170,485,150,30);
             pinchange.addActionListener(this);
             image.add(pinchange);
 
             balancewnuiry=new JButton("Balance Enquiry");
-            balancewnuiry.setBounds(355,485,150,30);
+            balancewnuiry.setBounds(355,450,150,30);
             balancewnuiry.addActionListener(this);
             image.add(balancewnuiry);
 
             exit=new JButton("Exit");
-            exit.setBounds(355,520,150,30);
+            exit.setBounds(355,485,150,30);
             exit.addActionListener(this);
             image.add(exit);
 
