@@ -17,6 +17,7 @@ public class SignupOne extends JFrame implements ActionListener {
     SignupOne(){
 
 
+
         setLayout(null);
 
         Random ran=new Random();

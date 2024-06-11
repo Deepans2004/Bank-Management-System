@@ -15,6 +15,8 @@ public class Deposit extends JFrame implements ActionListener {
 
         this.pinnumber=pinnumber;
         setLayout(null);
+        setTitle("Deposit");
+
 
         setLayout(null);
 

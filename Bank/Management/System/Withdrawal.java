@@ -18,6 +18,8 @@ public class Withdrawal extends JFrame implements ActionListener {
         this.pinnumber=pinnumber;
         setLayout(null);
 
+        setTitle("Withdrawal");
+
         setLayout(null);
 
         ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));

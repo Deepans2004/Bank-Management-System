@@ -14,6 +14,8 @@ public class PinChange extends JFrame implements ActionListener {
     PinChange(String pinnumber) {
         this.pinnumber = pinnumber;
 
+        setTitle("Pin Change");
+
         setLayout(null);
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
