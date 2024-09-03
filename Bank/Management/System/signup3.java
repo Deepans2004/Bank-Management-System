@@ -51,7 +51,7 @@ public class signup3 extends JFrame implements ActionListener {
         add(r4);
 
         ButtonGroup groupaccount=new ButtonGroup();
-        groupaccount.add(r1);
+       groupaccount.add(r1);
         groupaccount.add(r2);
         groupaccount.add(r3);
         groupaccount.add(r4);
